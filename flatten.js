@@ -27,10 +27,13 @@ const flatten = function(array) {
   }
 
   return result;
+
 };
 
-const answer = flatten([1, 2, [3, 4], 5, [6]]);
-assertArraysEqual(answer , [1, 2, 3, 4, 5, 6]);
+
+// const answer = flatten([1, 2, [3, 4], 5, [6]]);
+// assertArraysEqual(answer , [1, 2, 3, 4, 5, 6]);
+// console.log(answer)
 
 
 

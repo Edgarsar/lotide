@@ -1,3 +1,4 @@
+//checks if two values are equal or not
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
@@ -7,11 +8,12 @@ const assertEqual = function(actual, expected) {
 
 };
 
-
+//count of each of the letters in the string
+//return an object where property/key should be the number of occurrences for the string character
 const countLetters = function(str) {
 
   const result = {};
-
+// remove white spaces
   const newStrings = str.replace(/ /g, "");
   for (const newString of newStrings) {
     if (result[newString]) {

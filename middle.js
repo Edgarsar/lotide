@@ -1,4 +1,4 @@
-//ASSERTION FUNCTIONS
+
 const eqArrays = function(arrOne, arrTwo) {
   return Array.isArray(arrOne) &&
     Array.isArray(arrTwo) &&
@@ -15,7 +15,7 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 
 };
 
-// return the middle-most element
+// return the middle-most element(s)
 const middle = function(array) {
   let result = [];
   const midIndex = Math.floor(array.length / 2);

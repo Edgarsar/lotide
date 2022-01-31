@@ -1,4 +1,4 @@
-// function thatreturn a subset of a given array, removing unwanted elements
+// function that return a subset of a given array, removing unwanted elements
 const without = function(source, itemsToRemove) {
   return source.filter(function(index) {
     return itemsToRemove.indexOf(index) < 0;
