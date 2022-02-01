@@ -6,10 +6,12 @@ const eqArrays = function(arrOne, arrTwo) {
 
 };
 const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    console.log(`✅✅✅Assertion Passed:`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed:`);
-  }
+  
+  const inspect = require('util').inspect;
 
+  if (eqArrays(arrayOne, arrayTwo)) {
+    console.log(`✅✅✅Assertion Passed: ${inspect(arrayOne)} === ${inspect(arrayTwo)}`);
+  } else {
+    console.log(`🛑🛑🛑Assertion Failed: ${inspect(arrayOne)} !== ${inspect(arrayTwo)}`);
+  }
 };
