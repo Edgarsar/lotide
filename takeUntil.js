@@ -10,6 +10,7 @@ const takeUntil = function(array, callback) {
   }
 };
 
+
 const eqArrays = function(arrOne, arrTwo) {
   return Array.isArray(arrOne) &&
     Array.isArray(arrTwo) &&
