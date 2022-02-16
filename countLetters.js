@@ -1,34 +1,23 @@
-//checks if two values are equal or not
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-
-};
-
-//count of each of the letters in the string
+//The function should take in a sentence (as a string) and then return a count of each of the letters in that sentence.
 //return an object where property/key should be the number of occurrences for the string character
 const countLetters = function(str) {
 
   const result = {};
-// remove white spaces
+  // remove white spaces
   const newStrings = str.replace(/ /g, "");
+
+  //loop over the string
   for (const newString of newStrings) {
     if (result[newString]) {
+      // increment each key value by 1 by occurrences for the string character
       result[newString] += 1;
     } else {
+      // create a key in the result object with the each character and assign the value 1
       result[newString] = 1;
     }
   }
   return result;
 };
 
-const result1 = countLetters("lighthouse in the house");
-assertEqual(result1["l"], 1);
-assertEqual(result1["h"], 4);
-assertEqual(result1["g"], 2);
-assertEqual(result1["w"], 1);
-
+module.exports = countLetters;
 
