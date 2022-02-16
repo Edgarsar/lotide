@@ -1,39 +1,17 @@
-
-const eqArrays = function(arrOne, arrTwo) {
-  return Array.isArray(arrOne) &&
-    Array.isArray(arrTwo) &&
-    arrOne.length === arrTwo.length &&
-    arrOne.every((val, index) => val === arrTwo[index]);
-
-};
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    console.log(`✅✅✅Assertion Passed:`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed:`);
-  }
-
-};
-
 // return the middle-most element(s)
 const middle = function(array) {
   let result = [];
-  const midIndex = Math.floor(array.length / 2);
-
-  if (array.length <= 2) {
+  const midIndex = Math.floor(array.length / 2);  // finds largest integer less than or equal to the middle index 
+  console.log(midIndex)
+  if (array.length <= 2) {  // if an array has less then two elements then return empty array(no miidle)
     return result;
   }
-
+  // checks if the array length is odd then push the midile index element of the array to the result variable
   if (array.length % 2 !== 0) {
     result.push(array[midIndex]);
   } else {
-    result.push(array[midIndex - 1], array[midIndex]);
-  }
-  return result;
-};
+    result.push(array[midIndex - 1], array[midIndex]); //otherwise push the previous and the midile index elements
+    return result;
+  };
 
-
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7, 8]), [4, 5]);
+  module.exports = middle;
