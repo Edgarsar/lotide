@@ -1,12 +1,9 @@
-const eqArrays = function(arrOne, arrTwo) {
-  return Array.isArray(arrOne) &&
-    Array.isArray(arrTwo) &&
-    arrOne.length === arrTwo.length &&
-    arrOne.every((val, index) => val === arrTwo[index]);
 
-};
+const eqArrays = require("./eqArrays");
+
+
 const assertArraysEqual = function(arrayOne, arrayTwo) {
-  
+  //returns a string representation of an object
   const inspect = require('util').inspect;
 
   if (eqArrays(arrayOne, arrayTwo)) {
@@ -15,3 +12,8 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
     console.log(`🛑🛑🛑Assertion Failed: ${inspect(arrayOne)} !== ${inspect(arrayTwo)}`);
   }
 };
+
+
+module.exports = assertArraysEqual;
+
+
