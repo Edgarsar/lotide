@@ -13,8 +13,8 @@ const middle = function(array) {
     result.push(array[midIndex]);
   } else {
     result.push(array[midIndex - 1], array[midIndex]); //otherwise push the previous and the midile index elements
-    return result;
   }
+  return result;
 };
 
 
