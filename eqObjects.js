@@ -1,41 +1,28 @@
-/* // function checks primitive data types
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
 
-};
-// function checks two arrays equality
-const eqArrays = function(arrOne, arrTwo) {
-  return Array.isArray(arrOne) &&
-    Array.isArray(arrTwo) &&
-    arrOne.length === arrTwo.length &&
-    arrOne.every((val, index) => val === arrTwo[index]);
-
-}; */
-// function checks two objects equality
 const assertEqual = require("./assertEqual");
 
 const eqArrays = require("./eqArrays");
 
-const eqObjects = function(object1, object2) {
-  
+//  function returns true if both objects have identical keys with identical values.
+const eqObjects = function (object1, object2) {
+  //returns an array of object1 property names
   const key1 = Object.keys(object1);
-
+  //returns an array of object2 property names
   const key2 = Object.keys(object2);
-  
+  //check if they have the same number of keys
   if (key1.length !== key2.length) {
     return false;
   }
   for (const key of key1) {
+    //check if the key values are arrays
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      // compare them using eqArrays function
       if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
+      //check if the key has identical values(primitive types)
     } else if
-    (object1[key] !== object2[key]) {
+      (object1[key] !== object2[key]) {
       return false;
     }
   }
