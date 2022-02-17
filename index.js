@@ -16,6 +16,8 @@ const letterPositions = require("./letterPositions");
 
 const findKeyByValue = require("./findKeyByValue");
 
+const takeUntil = require("./takeUntil");
+
 module.exports = {
 
   head,
@@ -26,7 +28,8 @@ module.exports = {
   countOnly,
   countLetters,
   letterPositions,
-  findKeyByValue
+  findKeyByValue,
+  takeUntil
 };
 
 
