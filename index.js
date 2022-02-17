@@ -22,6 +22,14 @@ const findKey = require("./findKey");
 
 const map = require("./map");
 
+const assertEqual = require("./assertEqual");
+
+const eqArrays = require("./eqArrays");
+
+const eqObjects = require("./eqObjects");
+
+
+
 module.exports = {
 
   head,
@@ -35,7 +43,9 @@ module.exports = {
   findKeyByValue,
   takeUntil,
   findKey,
-  map
+  map,
+  assertEqual,
+  eqArrays,
+  eqObjects
 };
-
 
