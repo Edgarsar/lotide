@@ -1,4 +1,4 @@
-// function checks primitive data types
+/* // function checks primitive data types
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
@@ -14,8 +14,12 @@ const eqArrays = function(arrOne, arrTwo) {
     arrOne.length === arrTwo.length &&
     arrOne.every((val, index) => val === arrTwo[index]);
 
-};
+}; */
 // function checks two objects equality
+const assertEqual = require("./assertEqual");
+
+const eqArrays = require("./eqArrays");
+
 const eqObjects = function(object1, object2) {
   
   const key1 = Object.keys(object1);
