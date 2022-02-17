@@ -16,6 +16,7 @@ const map = function(array, callback) {
 const results1 = map(words, word => word.toUpperCase());
 const results2 = map(words, element => element + "#");
 
+module.exports = map;
 
-assertArraysEqual(results1, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM']);
-assertArraysEqual(results2, ["ground#", "control#", "to#", "major#", "tom#"]);
+// assertArraysEqual(results1, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM']);
+// assertArraysEqual(results2, ["ground#", "control#", "to#", "major#", "tom#"]);
