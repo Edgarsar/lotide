@@ -18,6 +18,8 @@ const findKeyByValue = require("./findKeyByValue");
 
 const takeUntil = require("./takeUntil");
 
+const findKey = require("./findKey");
+
 module.exports = {
 
   head,
@@ -29,7 +31,8 @@ module.exports = {
   countLetters,
   letterPositions,
   findKeyByValue,
-  takeUntil
+  takeUntil,
+  findKey
 };
 
 
