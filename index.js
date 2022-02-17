@@ -14,6 +14,8 @@ const countLetters = require("./countLetters");
 
 const letterPositions = require("./letterPositions");
 
+const findKeyByValue = require("./findKeyByValue");
+
 module.exports = {
 
   head,
@@ -23,7 +25,8 @@ module.exports = {
   flatten,
   countOnly,
   countLetters,
-  letterPositions
+  letterPositions,
+  findKeyByValue
 };
 
 
