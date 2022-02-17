@@ -2,7 +2,7 @@ const assertArraysEqual = require("./assertArraysEqual");
 
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function (array, callback) {
+const map = function(array, callback) {
   //define a new empty array
   const results = [];
   //loop over the words array
