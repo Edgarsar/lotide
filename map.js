@@ -1,33 +1,21 @@
+const assertArraysEqual = require("./assertArraysEqual");
+
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function(array, callback) {
+const map = function (array, callback) {
+  //define a new empty array
   const results = [];
+  //loop over the words array
   for (let item of array) {
+    // invoke callback function and push into the resualt
     results.push(callback(item));
   }
   return results;
 };
+//callback function capitalize all elements in the given array
 const results1 = map(words, word => word.toUpperCase());
-// console.log(results1);
+const results2 = map(words, element => element + "#");
 
 
-
-
-const eqArrays = function(arrOne, arrTwo) {
-  return Array.isArray(arrOne) &&
-    Array.isArray(arrTwo) &&
-    arrOne.length === arrTwo.length &&
-    arrOne.every((val, index) => val === arrTwo[index]);
-
-};
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-
-  const inspect = require('util').inspect;
-
-  if (eqArrays(arrayOne, arrayTwo)) {
-    console.log(`✅✅✅Assertion Passed: ${inspect(arrayOne)} === ${inspect(arrayTwo)}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${inspect(arrayOne)} !== ${inspect(arrayTwo)}`);
-  }
-};
 assertArraysEqual(results1, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM']);
+assertArraysEqual(results2, ["ground#", "control#", "to#", "major#", "tom#"]);
