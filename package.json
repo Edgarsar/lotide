@@ -1,6 +1,6 @@
 {
   "name": "@edgar_sargsyan/lotide",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Edgar's library of helper functions",
   "main": "assertArraysEqual.js",
   "directories": {
