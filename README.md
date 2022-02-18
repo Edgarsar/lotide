@@ -38,7 +38,8 @@ The following functions are currently implemented:
 * `map(array, callback)`: Takes in an array and a callback and returns a new array based on the results of the callback on each item in the array.
 * `takeUntil(array, callback)`: Takes in an array and callback and returns a slice of the array based on the criteria specified in the callback.
 * `findKey(obj, callback)`: Takes in an object and callback and returns the first key that meets the criteria specified in callback.
-* `assertArraysEqual(actual, expected)`: Takes in 2 arrays and returns true if they are equal and false otherwise.
 * `assertEqual(actual, expected)`: Takes in 2 values and returns true if they are equal and false otherwise 
+* `eqArrays(arrOne, arrTwo)` : Takes in 2 arrays and returns true if the arrays are equal and false otherwise.
+* `assertArraysEqual(actual, expected)`: Takes in 2 arrays and returns true if they are equal and false otherwise.
 * `eqObjects(actual, expected)` : Takes in 2 objects and return true if they are equal and false otherwise.
 * `assertObjectsEqual((actual, expected)`: Takes in two objects and logs in the console log to check and return the result of if they are identical
