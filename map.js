@@ -1,7 +1,7 @@
 const assertArraysEqual = require("./assertArraysEqual");
 
 const words = ["ground", "control", "to", "major", "tom"];
-
+// Takes in an array and a callback and returns a new array based on the results of the callback on each item in the array.
 const map = function(array, callback) {
   //define a new empty array
   const results = [];
@@ -12,11 +12,7 @@ const map = function(array, callback) {
   }
   return results;
 };
-//callback function capitalize all elements in the given array
-const results1 = map(words, word => word.toUpperCase());
-const results2 = map(words, element => element + "#");
+
 
 module.exports = map;
 
-// assertArraysEqual(results1, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM']);
-// assertArraysEqual(results2, ["ground#", "control#", "to#", "major#", "tom#"]);
