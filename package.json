@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@edgar_sargsyan/lotide",
+  "version": "1.0.1",
+  "description": "Edgar's library of helper functions",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Edgarsar/lotide.git"
   },
-  "author": "",
+  "author": "Edgar Sargsyan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Edgarsar/lotide/issues"
