@@ -1,9 +1,8 @@
-
 const assertEqual = require("./assertEqual");
 
 const eqArrays = require("./eqArrays");
 
-//  function returns true if both objects have identical keys with identical values.
+// Takes in 2 objects and return true if they are equal and false otherwise.
 const eqObjects = function(object1, object2) {
   //returns an array of object1 property names
   const key1 = Object.keys(object1);
@@ -33,14 +32,5 @@ const eqObjects = function(object1, object2) {
 
 module.exports = eqObjects;
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-eqObjects(cd, dc); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-eqObjects(cd, cd2); // => false
-
-
-// assertEqual(eqObjects(cd, dc), true);
-// assertEqual(eqObjects(cd, cd2), false);
 
