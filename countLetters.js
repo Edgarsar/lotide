@@ -1,5 +1,4 @@
-//The function should take in a sentence (as a string) and then return a count of each of the letters in that sentence.
-//return an object where property/key should be the number of occurrences for the string character
+// Takes in a sentence and returns a count of each of the letters in the sentence.
 const countLetters = function(str) {
 
   const result = {};
