@@ -38,6 +38,6 @@ The following functions are currently implemented:
 * `map(map)`: returns a new array based on the results of the callback function
 * `takeUntil(takeUntil)`: returns a "slice of the array with elements taken from the beginning
 * `findKey(findKey)`: returns the first key for which the callback returns a truthy value
-* `assertArraysEqual(assertEqual)`: Takes in two arrays and logs in the console log to see if they are the same. return it is falsy or true.
-* `assertEqual(assertEqual)`: Takes in two elements that aren't Objects or arrays to check and return the result of if they are identical.
-* `assertObjectsEqual(assertObjectsEqual)`: Takes in two objects and logs in the console log to check and return the result of if they are identical.
+* `assertArraysEqual(assertEqual)`: Takes in two arrays and logs in the console log to see if they are the same. return it is falsy or true
+* `assertEqual(assertEqual)`: Takes in two elements that aren't Objects or arrays to check and return the result of if they are identical
+* `assertObjectsEqual(assertObjectsEqual)`: Takes in two objects and logs in the console log to check and return the result of if they are identical
