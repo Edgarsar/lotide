@@ -1,4 +1,4 @@
-//tests for equality between two arrays
+// Takes in 2 arrays and returns true if the arrays are equal and false otherwise.
 const eqArrays = function(arrOne, arrTwo) {
   return Array.isArray(arrOne) &&   //determines whether the arrOne is an Array
     Array.isArray(arrTwo) &&        //determines whether the arrTwo is an Array
