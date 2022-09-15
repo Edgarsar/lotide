@@ -19,4 +19,16 @@ describe("#eqObjects", () => {
     assert.strictEqual(eqObjects(cd, cd2), true);
   });
 
+  it("returns false for an input of '{ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }'", () => {
+    const cd = { a: { y: 0, z: 1 }, b: 2 };
+    const cd2 = { a: { z: 1 }, b: 2 };
+    assert.strictEqual(eqObjects(cd, cd2), false);
+  });
+
+  it("returns false for an input of '{ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }'", () => {
+    const cd = { a: { y: 0, z: 1 }, b: 2 };
+    const cd2 = { a: 1, b: 2 };
+    assert.strictEqual(eqObjects(cd, cd2), false);
+  });
+
 });
