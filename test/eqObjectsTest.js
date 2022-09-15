@@ -13,5 +13,10 @@ describe("#eqObjects", () => {
     const cd2 = { c: "1", d: ["2", 3, 4] };
     assert.strictEqual(eqObjects(cd, cd2), false);
   });
+  it("returns true for an input of '{ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }'", () => {
+    const cd = { a: { z: 1 }, b: 2 };
+    const cd2 = { a: { z: 1 }, b: 2 };
+    assert.strictEqual(eqObjects(cd, cd2), true);
+  });
 
 });
