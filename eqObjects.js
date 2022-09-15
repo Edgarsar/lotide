@@ -3,7 +3,7 @@ const assertEqual = require("./assertEqual");
 const eqArrays = require("./eqArrays");
 
 // Takes in 2 objects and return true if they are equal and false otherwise.
-const eqObjects = function(object1, object2) {
+const eqObjects = function (object1, object2) {
   //returns an array of object1 property names
   const key1 = Object.keys(object1);
   //returns an array of object2 property names
@@ -12,9 +12,20 @@ const eqObjects = function(object1, object2) {
   if (key1.length !== key2.length) {
     return false;
   }
+
   for (const key of key1) {
+
+    if (!Array.isArray(object1[key]) &&
+      !Array.isArray(object2[key]) &&
+      typeof object1[key] === "object" &&
+      typeof object2[key] === "object")
+      {
+      if (!eqObjects(object1[key], object2[key])) {
+        return false
+      }
+    }
     //check if the key values are arrays
-    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+    else if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       // compare them using eqArrays function
       if (!eqArrays(object1[key], object2[key])) {
         return false;
@@ -24,7 +35,16 @@ const eqObjects = function(object1, object2) {
       (object1[key] !== object2[key]) {
       return false;
     }
+
+
+    // if (!Array.isArray(object1[key]) && !Array.isArray(object2[key])) {
+    //   eqObjects((object1[key], object2[key]))
+    // }
+    // else {
+    //   eqObjects((object1[key], object2[key]))
+    // }
   }
+
 
 
   return true;
